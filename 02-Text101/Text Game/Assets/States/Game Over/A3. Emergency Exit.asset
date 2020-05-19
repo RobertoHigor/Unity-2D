@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382300eb8da882a4297730f32e79899d, type: 3}
   m_Name: A3. Emergency Exit
   m_EditorClassIdentifier: 
-  storyText: "\nOkay, you're around the corner. No one can see you. You think.\r\n\r\nBit
+  storyText: "Okay, you're around the corner. No one can see you. You think.\r\n\r\nBit
     tough to hear yourself think above the thumping machinery. However, in front
     of you is the emergency exit door. It has an oversized, cast iron lock hanging
     from a bolted handle. You could try picking the lock, or maybe look for a way

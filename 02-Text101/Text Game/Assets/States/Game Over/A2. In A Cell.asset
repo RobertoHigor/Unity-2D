@@ -12,16 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 382300eb8da882a4297730f32e79899d, type: 3}
   m_Name: A2. In A Cell
   m_EditorClassIdentifier: 
-  storyText: '
+  storyText: 'Well, that was pretty stupid. You sustain a brutal beating and end
+    up dumped in a dirty cell. The bars are thick cast iron. The door is old and
+    patched together with plate metal and thick red wires.
 
-    Well, that was pretty stupid. You sustain a brutal beating and
-    end up dumped in a dirty cell. The bars are thick cast iron. The door is old
-    and patched together with plate metal and thick red wires.
 
-    
-
-    You have
-    no idea where you are. And your head hurts.
+    You have no idea
+    where you are. And your head hurts.
 
 '
   nextStates: []
