@@ -16,4 +16,10 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public void QuitGame()
+    {
+        // Esse método só funciona em builds. No editor o jogo não é encerrado.
+        Application.Quit();
+    }
 }
