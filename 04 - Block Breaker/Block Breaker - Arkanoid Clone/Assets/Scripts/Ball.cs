@@ -7,15 +7,21 @@ public class Ball : MonoBehaviour
     [SerializeField] Paddle paddle1;
     [SerializeField] float xForce = 2f;
     [SerializeField] float yForce = 15f;
-    bool hasStarted = false;
-
+    [SerializeField] AudioClip[] ballSounds;
+  
     // state
+    bool hasStarted = false;
     Vector2 paddleToBallVector;
+
+    // Cached component references
+    AudioSource myAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         // Ball - Paddle 1 = Distância entre a bola e o paddle
         paddleToBallVector = transform.position - paddle1.transform.position;
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,5 +52,17 @@ public class Ball : MonoBehaviour
             hasStarted = true;
             GetComponent<Rigidbody2D>().velocity = new Vector2(xForce, yForce);
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision) 
+    {
+       if (hasStarted)
+       {
+        if (collision.gameObject.name != "Paddle") 
+        {
+            AudioClip clip = ballSounds[Random.Range(0, ballSounds.Length)];
+            myAudioSource.PlayOneShot(clip); 
+        }
+       }
     }
 }
