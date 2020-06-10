@@ -7,7 +7,7 @@ public class Block : MonoBehaviour
     // Config params
     [SerializeField] AudioClip breakSound;
     [SerializeField] GameObject blockSparkVFX;
-    [SerializeField] int maxHits;
+    [SerializeField] Sprite[] hitSprites;
     
     // Cached Reference
     Level level;
@@ -36,10 +36,22 @@ public class Block : MonoBehaviour
         if (tag == "Breakable")
         {
             timesHit++;
+            int maxHits = hitSprites.Length + 1; // A vida do bloco é de acordo com a quantidade de sprites
             if (timesHit >= maxHits)
              DestroyBlock();
+            else
+             ShowNextHitSprite();
         }
        
+    }
+
+    private void ShowNextHitSprite()
+    {
+        int spriteIndex = timesHit - 1;
+        if (hitSprites[spriteIndex] != null)
+            GetComponent<SpriteRenderer>().sprite = hitSprites[spriteIndex];
+        else
+            Debug.LogError("Block Sprite is missing" + gameObject.name);
     }
 
     private void DestroyBlock()
