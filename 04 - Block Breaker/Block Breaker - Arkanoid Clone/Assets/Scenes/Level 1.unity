@@ -325,6 +325,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 163201629}
     m_Modifications:
+    - target: {fileID: 2279218668108140304, guid: 2d85ad3d7c7100443ba7b665505af0f6,
+        type: 3}
+      propertyPath: blockSparkVFX
+      value: 
+      objectReference: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 3}
     - target: {fileID: 2279218668108140316, guid: 2d85ad3d7c7100443ba7b665505af0f6,
         type: 3}
       propertyPath: m_Name

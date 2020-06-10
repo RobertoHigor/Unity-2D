@@ -47,4 +47,8 @@ public class GameStatus : MonoBehaviour
     {
         currentScore += scorePerBlockDestroyed;
     }
+
+    public void ResetSession() {
+        Destroy(gameObject);
+    }
 }
