@@ -653,6 +653,11 @@ PrefabInstance:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1933659466}
+    - target: {fileID: 5164301882859171639, guid: eccdf6be1342d514e8873ab40092ec2d,
+        type: 3}
+      propertyPath: isAutoPlayEnabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6804816895452507349, guid: eccdf6be1342d514e8873ab40092ec2d,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -1277,6 +1282,16 @@ PrefabInstance:
       propertyPath: paddle1
       value: 
       objectReference: {fileID: 179330758}
+    - target: {fileID: 869368715773077114, guid: bfba5315506278f46bee8e80f6c152d3,
+        type: 3}
+      propertyPath: yForce
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 869368715773077114, guid: bfba5315506278f46bee8e80f6c152d3,
+        type: 3}
+      propertyPath: xForce
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bfba5315506278f46bee8e80f6c152d3, type: 3}
 --- !u!1001 &2473355902522257316
@@ -1478,6 +1493,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7174031447610466283, guid: 275f9f7d00c862f4592cc077a7372b0d,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3625
       objectReference: {fileID: 0}
     - target: {fileID: 7174031447610466285, guid: 275f9f7d00c862f4592cc077a7372b0d,
         type: 3}
