@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    //config params
     [SerializeField] float moveSpeed = 10f;
-    [SerializeFIeld] float padding = 1f; // padding entre as bordas
+    [SerializeField] float padding = 1f; // padding entre as bordas
+    [SerializeField] GameObject playerLaser;
+    [SerializeField] float projectileSpeed = 10f;
 
     float xMin;
     float xMax;
     float yMin;
     float yMax;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +25,7 @@ public class Player : MonoBehaviour
     void Update()
     {
       Move(); 
+      Fire();
     }
 
     private void Move()
@@ -30,18 +35,39 @@ public class Player : MonoBehaviour
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
 
-        var newXPos = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);  
-        var newYPos = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax); 
+        var newXPos = Mathf.Clamp(
+            transform.position.x + deltaX, xMin, xMax);  
+        var newYPos = Mathf.Clamp(
+            transform.position.y + deltaY, yMin, yMax); 
+        
         transform.position = new Vector2(newXPos, newYPos);   
+    }
+
+    private void Fire()
+    {
+        if (Input.GetButtonDown("Fire1"))
+        {
+            // Instanciar um laser na posição do jogador
+            // Quarternion.identity serve para utilizar a rotação atual.
+            GameObject laser = Instantiate(
+                playerLaser, 
+                transform.position, 
+                Quaternion.identity) as GameObject;            
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);           
+        }
     }
 
     private void SetUpMoveBoundaries() 
     {
         Camera gameCamera = Camera.main;
         // World space value do X
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding; 
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
+        xMin = gameCamera.ViewportToWorldPoint(
+            new Vector3(0, 0, 0)).x + padding;
+        xMax = gameCamera.ViewportToWorldPoint(
+            new Vector3(1, 0, 0)).x - padding; 
+        yMin = gameCamera.ViewportToWorldPoint(
+            new Vector3(0, 0, 0)).y + padding;
+        yMax = gameCamera.ViewportToWorldPoint(
+            new Vector3(0, 1, 0)).y - padding;
     }
 }
