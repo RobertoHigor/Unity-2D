@@ -4,3 +4,4 @@
 * Coroutines - Para a nave atirar enquanto segurar o botão
 * GameObject Shredder - Destruir objetos em colisão
 * Waypoints e mover objeto em um caminho
+* Criando waves de inimigos com um scriptable object.
