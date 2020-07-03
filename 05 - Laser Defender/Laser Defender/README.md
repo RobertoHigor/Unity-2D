@@ -5,3 +5,4 @@
 * GameObject Shredder - Destruir objetos em colisão
 * Waypoints e mover objeto em um caminho
 * Criando waves de inimigos com um scriptable object.
+* Dando spawn em waves de inimigos, especificando a quantidade e o tempo entre eles.

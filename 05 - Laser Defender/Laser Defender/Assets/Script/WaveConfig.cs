@@ -22,12 +22,12 @@ public class WaveConfig : ScriptableObject
         {// Para cada transform child (waypoints) em pathPrefab
             waveWaypoints.Add(child);
         }
-        
+
         return waveWaypoints;
     }
     public float GetTimeBetweenSpawns(){return timeBetweenSpawns;}
     public float GetSpawnRandomFactor(){return spawnRandomFactor;}
     public int GetNumberOfEnemies(){return numberOfEnemies;}
-    public float GetMoveSPeed(){return moveSpeed;}
+    public float GetMoveSpeed(){return moveSpeed;}
 
 }

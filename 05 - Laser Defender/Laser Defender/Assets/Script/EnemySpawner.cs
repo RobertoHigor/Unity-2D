@@ -24,11 +24,15 @@ public class EnemySpawner : MonoBehaviour
     {
         for (int i = 0; i < wave.GetNumberOfEnemies(); i++)
         {
-            Instantiate(
+            var newenemy = Instantiate(// Guardando os inimigos
             wave.GetEnemyPrefab(), // Pegar o inimigo da wave
             wave.GetWaypoints()[0].transform.position, // Pegar a posição do primeiro waypoint
             Quaternion.identity
             );
+
+            // Passando a WaveConfig do método para o inimigo instanciado.
+            newenemy.GetComponent<EnemyPathing>().SetWaveConfig(wave);
+
             yield return new WaitForSeconds(wave.GetTimeBetweenSpawns());
         }       
     }
