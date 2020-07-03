@@ -5,20 +5,28 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     [SerializeField] List<WaveConfig> waveConfigs; // Lista de Waves
-    int startingWave = 0;
+    [SerializeField] int startingWave = 0;
+    [SerializeField] bool looping = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-       var currentWave = waveConfigs[startingWave]; 
-       StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+    // Fazendo o Start ser uma corrotina
+    IEnumerator Start()
+    {       
+       do
+       {
+           yield return StartCoroutine(SpawnAllWaves());
+       } while (looping);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Spawn todas as waves da lista de waves
+   private IEnumerator SpawnAllWaves()
+   {
+       for (int waveIndex = startingWave; waveIndex < waveConfigs.Count; waveIndex++)
+       {
+          var currentWave = waveConfigs[waveIndex];  
+          // Iniciar a corrotina de dar spawn nos inimigos, passando a waveConfig
+          yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
+       }
+   }
 
     private IEnumerator SpawnAllEnemiesInWave(WaveConfig wave)
     {
