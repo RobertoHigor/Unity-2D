@@ -99,3 +99,4 @@ MonoBehaviour:
   playerLaser: {fileID: 7767689572953205859, guid: 46a8e86139f59a3408a4f46ca858367c,
     type: 3}
   projectileSpeed: 20
+  projectileFiringPeriod: 0.1
