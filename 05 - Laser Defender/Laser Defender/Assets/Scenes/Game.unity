@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4644315522512676698, guid: a639c7691c4b76044971fa3600c637ed,
+        type: 3}
+      propertyPath: projectileFiringPeriod
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 4644315522512676701, guid: a639c7691c4b76044971fa3600c637ed,
         type: 3}
       propertyPath: m_LocalPosition.x
