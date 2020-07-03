@@ -17,6 +17,7 @@ public class Shredder : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
+        // Caso não especificar que é um gameObject, o que será destruído é apenas o collider.
             Destroy(other.gameObject);
     }
 }
