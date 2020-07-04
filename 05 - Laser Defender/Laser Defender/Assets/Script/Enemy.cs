@@ -45,13 +45,18 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) 
     {
         // Acessando o componente damageDealer para pegar o dano
-        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();       
+        DamageDealer damageDealer = other.gameObject.GetComponent<DamageDealer>();
+        if (!damageDealer)
+        { // Protegendo contra null exception, no caso de não existir o componente.
+            return;
+        }        
         ProcessDamage(damageDealer);
     }
 
     private void ProcessDamage(DamageDealer damageDealer)
     {
         health -= damageDealer.GetDamage();
+        damageDealer.Hit();
         if (health <= 0)
         {
             Destroy(gameObject);
