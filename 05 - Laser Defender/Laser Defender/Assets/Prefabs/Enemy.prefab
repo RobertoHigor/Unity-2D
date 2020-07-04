@@ -125,3 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  shotCounter: 0
+  minTimeBetweenShots: 0.2
+  maxTimeBetweenShots: 3
+  enemyProjectile: {fileID: 817683369115409504, guid: ecc4ba187b722944f80564119fd5ae7c,
+    type: 3}
+  projectileSpeed: 10
