@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] int health = 2;
+    [SerializeField] GameObject explosionParticle;
+    [SerializeField] float durationOfExplosion = 1f;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -59,7 +61,15 @@ public class Enemy : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Explode();
         }
+    }
+
+    private void Explode()
+    {
+        //GameObject explosion;
+        Instantiate(explosionParticle, transform.position, transform.rotation);
+        Destroy(gameObject);
+        //Destroy(explosion, durationOfExplosion);
     }
 }

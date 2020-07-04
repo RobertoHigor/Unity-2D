@@ -125,6 +125,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  explosionParticle: {fileID: 4398722016087087628, guid: 491cdb4febb6c234c9d68b165fcc70cf,
+    type: 3}
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
