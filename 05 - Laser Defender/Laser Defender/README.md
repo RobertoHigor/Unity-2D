@@ -6,3 +6,10 @@
 * Waypoints e mover objeto em um caminho
 * Criando waves de inimigos com um scriptable object.
 * Dando spawn em waves de inimigos, especificando a quantidade e o tempo entre eles.
+* Loop de inimigos
+* Classe para gerenciar o dano
+* Fazer o inimigo atirar aleatóriamente
+* Utilizar Layer Collision Matrix para que o inimigo não sofra dano do próprio laser.
+* Scrolling Background
+* Sons e musica
+* Sorting Layer
