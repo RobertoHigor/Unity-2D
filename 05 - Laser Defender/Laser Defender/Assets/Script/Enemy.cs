@@ -12,6 +12,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] float maxTimeBetweenShots = 3f;
     [SerializeField] GameObject enemyProjectile;
     [SerializeField] float projectileSpeed = 10f;
+
+    [Header("Sounds")]
+    [SerializeField] AudioClip explosionSound;
+    [SerializeField] AudioClip laserSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +44,7 @@ public class Enemy : MonoBehaviour
             enemyProjectile,
             transform.position, 
             Quaternion.identity) as GameObject;
-
+        GetComponent<AudioSource>().PlayOneShot(laserSound);
         projectile.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -projectileSpeed);
     }
 
@@ -61,6 +65,10 @@ public class Enemy : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
+            AudioSource.PlayClipAtPoint(
+                explosionSound,
+                Camera.main.transform.position, 
+                1f);
             Explode();
         }
     }
