@@ -111,14 +111,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7d47cc5987d0844b0db6eb9bc0e676, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 4
-  explosionParticle: {fileID: 4398722016087087628, guid: 491cdb4febb6c234c9d68b165fcc70cf,
-    type: 3}
-  durationOfExplosion: 1
+  health: 3
+  scoreValue: 10
   shotCounter: 0
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3
-  enemyProjectile: {fileID: 817683369115409504, guid: ecc4ba187b722944f80564119fd5ae7c,
+  explosionParticle: {fileID: 4398722016087087628, guid: 491cdb4febb6c234c9d68b165fcc70cf,
+    type: 3}
+  durationOfExplosion: 1
+  enemyProjectile: {fileID: 817683369115409504, guid: 91c0d4dca5715ed4fb6d813b6e5cd1cb,
     type: 3}
   projectileSpeed: 10
   explosionSound: {fileID: 8300000, guid: eb39042afaa0e474580a9da5171022a3, type: 3}

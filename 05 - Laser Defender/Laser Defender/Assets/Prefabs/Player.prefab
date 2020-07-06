@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 145472732}
   m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 706d7caf870c11a488fe5d3b57b6ff61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
+  moveSpeed: 15
   padding: 1
   health: 2
   playerLaser: {fileID: 7767689572953205859, guid: 46a8e86139f59a3408a4f46ca858367c,
@@ -142,7 +142,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d59590b56881ce44582f31fc1188439f, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.57
   m_Pitch: 1
   Loop: 0

@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [Header("Enemy Stats")]
     [SerializeField] int health = 2;
-    [SerializeField] GameObject explosionParticle;
-    [SerializeField] float durationOfExplosion = 1f;
+    [SerializeField] int scoreValue = 5;
     [SerializeField] float shotCounter;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
+
+    [Header("Enemy Effects")]
+    [SerializeField] GameObject explosionParticle;
+    [SerializeField] float durationOfExplosion = 1f; 
     [SerializeField] GameObject enemyProjectile;
     [SerializeField] float projectileSpeed = 10f;
 
@@ -75,6 +79,7 @@ public class Enemy : MonoBehaviour
 
     private void Explode()
     {
+        FindObjectOfType<GameSession>().AddToScore(scoreValue);
         //GameObject explosion;
         Instantiate(explosionParticle, transform.position, transform.rotation);
         Destroy(gameObject);
