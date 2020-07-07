@@ -4,3 +4,5 @@
 * Mais sobre canvas e World Unit
 * World Space Canvas Mode
 * Converter o canvas para grid
+* Animation e Animator controller
+* Spritesheet animation
