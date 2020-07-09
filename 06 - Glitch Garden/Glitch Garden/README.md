@@ -14,5 +14,6 @@
     * O Controller gerencia as Animations.
 * Spritesheet animation
 * Keyframe Animation
+    * É possível mover um objeto atravéz de animação.
 * Animation event
     * Torna possível chamar um método durante um frame de animação.
