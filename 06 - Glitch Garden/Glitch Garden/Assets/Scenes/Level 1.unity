@@ -465,6 +465,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1667204462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 457083080706603963, guid: 04f619c0f4829b24faaef7204c0e3201,
+    type: 3}
+  m_PrefabInstance: {fileID: 5414144311920283753}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1817245917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4242265706064256573, guid: ea2179a648e8c614f9461b65775dc340,
@@ -703,11 +709,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1155940684262391094, guid: 04f619c0f4829b24faaef7204c0e3201,
-        type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5414144310777535710, guid: 04f619c0f4829b24faaef7204c0e3201,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -768,7 +769,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cactus
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6791846836510417315, guid: 04f619c0f4829b24faaef7204c0e3201,
+        type: 3}
+      propertyPath: gun
+      value: 
+      objectReference: {fileID: 1667204462}
+    m_RemovedComponents:
+    - {fileID: 5999497107413787500, guid: 04f619c0f4829b24faaef7204c0e3201, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 04f619c0f4829b24faaef7204c0e3201, type: 3}
 --- !u!1001 &7531565185367378098
 PrefabInstance:

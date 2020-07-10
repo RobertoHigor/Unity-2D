@@ -17,3 +17,6 @@
     * É possível mover um objeto atravéz de animação.
 * Animation event
     * Torna possível chamar um método durante um frame de animação.
+
+## Física e colisão
+* Checar se a colisão possuí determinado componente.
