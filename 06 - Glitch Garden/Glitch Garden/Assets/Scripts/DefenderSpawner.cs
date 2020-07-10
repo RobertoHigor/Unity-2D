@@ -17,16 +17,25 @@ public class DefenderSpawner : MonoBehaviour
         // Converter a coordenada do world screen para o world space para obter a coordenada do grid
         // Nesse caso, converter a posição do mouse para World Point
         Vector2 worldPos = Camera.main.ScreenToWorldPoint(clickPos);
-
-        return worldPos;
+        Vector2 gridPos = SnapToGrid(worldPos);
+        return gridPos;
     }
 
-    private void SpawnDefender(Vector2 worldPos)
+    //Método para arredondar a posição para int.
+    private Vector2 SnapToGrid(Vector2 rawWorldPos)
+    {
+        float newX = Mathf.RoundToInt(rawWorldPos.x);
+        float newY = Mathf.RoundToInt(rawWorldPos.y);
+        return new Vector2(newX, newY);
+    }
+
+    private void SpawnDefender(Vector2 roundedPos)
     {
         GameObject newDefender = Instantiate(
             defender,
-            worldPos,
+            roundedPos,
             Quaternion.identity
         );
+        Debug.Log(roundedPos);
     }
 }
