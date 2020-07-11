@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4615166134457664972}
-  - component: {fileID: 4615166134457664973}
   - component: {fileID: 4615166134457664974}
   m_Layer: 0
   m_Name: Body
@@ -33,25 +32,6 @@ Transform:
   m_Father: {fileID: 8441029630489915559}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4615166134457664973
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4615166134457664960}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 40761e888442a6b439c3ba861d720d3d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &4615166134457664974
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -206,6 +186,7 @@ GameObject:
   - component: {fileID: 8441029630489915559}
   - component: {fileID: 1302527326}
   - component: {fileID: 1364751717538079686}
+  - component: {fileID: 1302527325}
   m_Layer: 0
   m_Name: Cactus
   m_TagString: Untagged
@@ -256,3 +237,22 @@ MonoBehaviour:
   projectile: {fileID: 2606096998536461511, guid: a88bdf7c7f22c334ab213f4d88411d49,
     type: 3}
   gun: {fileID: 4615166134500074825}
+--- !u!95 &1302527325
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7850466704554693017}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40761e888442a6b439c3ba861d720d3d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

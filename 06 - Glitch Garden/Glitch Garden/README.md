@@ -19,6 +19,10 @@
 * Animation event
     * Torna possível chamar um método durante um frame de animação.
 * Animation entre parent-child.
+    * Os scripts e o Animator controller devem estar no parent object
+    * O Animator controller do pai consegue o sprite do filho.
+    * Porém, os objetos filhos não acessam os sprites do pai.
+    * Os animation events acessam somente seus próprios scripts ou de seus pais.
 
 ## Física e colisão
 * Checar se a colisão possuí determinado componente.
