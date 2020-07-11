@@ -21,7 +21,15 @@ public class AttackerSpawner : MonoBehaviour
 
     private void SpawnAttacker()
     {
-        Instantiate(attackerPrefab, transform.position, transform.rotation);
+        // Instanciar como um Attacker
+        Attacker newAttacker = Instantiate(
+            attackerPrefab, 
+            transform.position, 
+            transform.rotation) as Attacker;
+        
+        // O pai de newAttacker será o Transform.
+        // No Hierarchy, eles irão aparece como filhos do objeto que os instanciam.
+        newAttacker.transform.parent = transform;
     }
 
     // Update is called once per frame

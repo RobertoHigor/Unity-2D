@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5919483305052377777}
   - component: {fileID: 203626391718482974}
   - component: {fileID: 4239617986920726249}
+  - component: {fileID: 1406727784}
   m_Layer: 5
   m_Name: Stars Display
   m_TagString: Untagged
@@ -78,6 +79,19 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 999
+--- !u!114 &1406727784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7817604586754213820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7783370ead1d4164a92a09041ac73d58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stars: 100
 --- !u!1 &8895470939731918030
 GameObject:
   m_ObjectHideFlags: 0
