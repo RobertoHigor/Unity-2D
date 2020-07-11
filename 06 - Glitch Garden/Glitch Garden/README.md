@@ -24,6 +24,13 @@
     * O Animator controller do pai consegue o sprite do filho.
     * Porém, os objetos filhos não acessam os sprites do pai.
     * Os animation events acessam somente seus próprios scripts ou de seus pais.
+* Alterar o estado de animação com uma condição
 
 ## Física e colisão
 * Checar se a colisão possuí determinado componente.
+* Detectar objetos no mesmo y
+* Previnir com que sejam colocado 2 objetos no mesmo lugar
+    *  Adiciona-se um collider por cima da área permitida.
+
+## Sprites
+* Invertendo sprites (flip) utilizando o scale no eixo x
