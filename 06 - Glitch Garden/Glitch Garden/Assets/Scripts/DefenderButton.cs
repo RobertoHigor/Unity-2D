@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class DefenderButton : MonoBehaviour
 {
+    [SerializeField] Defender defenderPrefab;
+
     private void OnMouseDown() {
         var buttons = FindObjectsOfType<DefenderButton>();
 
@@ -15,5 +17,6 @@ public class DefenderButton : MonoBehaviour
         
         // Alterar o botão selecionado para branco.
         GetComponent<SpriteRenderer>().color = Color.white;
+        FindObjectOfType<DefenderSpawner>().SetSelectedDefender(defenderPrefab);
     }
 }
