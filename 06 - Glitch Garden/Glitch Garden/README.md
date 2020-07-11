@@ -1,5 +1,6 @@
 # Tópicos tratados nesse projeto
 * Como fazer uma splash screen utilizando corrotina
+* Mais sobre relacionamento parent-child.
 
 ## Canvas
 * Mais sobre Scaling e Ancoragem.
@@ -17,6 +18,7 @@
     * É possível mover um objeto atravéz de animação.
 * Animation event
     * Torna possível chamar um método durante um frame de animação.
+* Animation entre parent-child.
 
 ## Física e colisão
 * Checar se a colisão possuí determinado componente.
