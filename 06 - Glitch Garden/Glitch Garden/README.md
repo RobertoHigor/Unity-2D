@@ -18,6 +18,7 @@
     * É possível mover um objeto atravéz de animação.
 * Animation event
     * Torna possível chamar um método durante um frame de animação.
+    * Adicionar recursos como um Animation Event
 * Animation entre parent-child.
     * Os scripts e o Animator controller devem estar no parent object
     * O Animator controller do pai consegue o sprite do filho.
