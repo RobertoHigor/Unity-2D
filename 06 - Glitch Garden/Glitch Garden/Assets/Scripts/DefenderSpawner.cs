@@ -12,7 +12,7 @@ public class DefenderSpawner : MonoBehaviour
         {
             AttemptToPlaceDefenderAt(GetSquarePosition());
         }
-        Debug.Log("mouse was clicked");
+        //Debug.Log("mouse was clicked");
     }
 
     // Definir como selecionado o último defender clicado
@@ -59,7 +59,7 @@ public class DefenderSpawner : MonoBehaviour
             roundedPos,
             Quaternion.identity
         ) as Defender;
-        Debug.Log(roundedPos);
+        //Debug.Log(roundedPos);
 
     }
 }
