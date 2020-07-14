@@ -22,6 +22,16 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex + 1);
     }
 
+    public void LoadGameOver()
+    {
+     SceneManager.LoadScene("Game Over");   
+    }
+
+    public void LoadStartScene()
+    {
+        SceneManager.LoadScene(1);
+    }
+
     IEnumerator DelayStartScren()
     {
         yield return new WaitForSeconds(3);
