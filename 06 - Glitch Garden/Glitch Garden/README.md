@@ -26,6 +26,9 @@
     * Os animation events acessam somente seus próprios scripts ou de seus pais.
 * Alterar o estado de animação com uma condição
 
+## Interface
+* Barra de progresso animada
+
 ## Física e colisão
 * Checar se a colisão possuí determinado componente.
 * Detectar objetos no mesmo y
